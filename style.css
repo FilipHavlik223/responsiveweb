@@ -1,0 +1,229 @@
+* {
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: lightgray;
+    border-radius: 0 0 100px 100px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 20px;
+
+        ul {
+            display: inline-flex;
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin: auto 5px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        .right-nav {
+            li {
+                font-size: 1.3rem;
+                margin: auto 0;
+            }
+
+            li::after {
+                content: "/";
+                margin: 10px;
+            }
+
+            li:last-child {
+                &::after {
+                    content: "";
+                    margin: 0;
+                }
+            }
+        }
+
+        .left-nav {
+            li {
+                font-size: 1.3rem;
+            }
+
+            span {
+                padding: 10px;
+                width: 75px;
+                display: inline-block;
+                text-align: center;
+                background: white;
+                border-radius: 40px;
+            }
+        }
+    }
+
+    .header-info {
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        .header-info-foto {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+
+            img {
+                width: 10%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 100%;
+                border: 3px solid white;
+            }
+        }
+
+        h1 {
+            width: 50%;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .action-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            background: black;
+            padding: 20px 50px;
+            border-radius: 50px;
+
+            img {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                box-shadow: 0 0 10px 1px black;
+            }
+        }
+    }
+
+}
+
+.section-partners {
+    background: lightgray;
+
+    .container {
+        background: white;
+        height: 20vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 0 0 100px 100px;
+
+        img {
+            width: 10%;
+        }
+    }
+
+
+}
+
+.section-colab {
+    background: lightgray;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+
+    h1 {
+        padding-bottom: 3rem;
+        margin: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+}
+
+li {
+    list-style: none;
+}
+
+.item-ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    body {
+        background: red;
+        margin: 0;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .header-info {
+        h1 {
+            font-size: 3rem !important;
+            width: 60% !important;
+        }
+
+        .header-info-foto {
+            img {
+                width: 18% !important;
+            }
+
+        }
+    }
+
+    .cola:nth-child(n+4) {
+        display: none;
+    }
+
+    .container {
+        img {
+            width: 17% !important;
+        }
+
+    }
+
+    .item-ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        justify-items: center;
+        padding: 0px;
+    }
+
+    .item-li {
+        display: flex;
+        align-items: center;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    body {
+        background: green;
+    }
+}
